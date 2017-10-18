@@ -1,0 +1,6 @@
+<% if @phrase.present? %>
+  $("#phrase-container").prepend("<div class='panel panel-primary'><div class='panel-body'><%= @phrase.name %></div></div>")
+<% else %>
+  alert("no more phrases in db")
+<% end %>  
+

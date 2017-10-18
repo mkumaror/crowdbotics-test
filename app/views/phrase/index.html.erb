@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='col-md-4'></div>
+  <div class='col-md-4'>
+    <div><%= link_to "Get New Phrase", rand_phrase_path, class: "btn btn-primary get-phrase-btn", remote: true %></div>
+    <div><%= link_to "Clear Phrases", clear_phrases_path, class: "btn btn-danger clear-phrase-btn", remote: true %></div>
+    <div class="phrases" id="phrase-container">
+	  	<% @phrases.each do |phrase| %>
+	  	  <div class="panel panel-primary">
+				  <div class="panel-body">
+				    <%= phrase.name %>
+				  </div>
+				</div>
+	  	<% end %>
+	  </div>	
+  </div>
+  <div class='col-md-4'></div>
+</div>
+
